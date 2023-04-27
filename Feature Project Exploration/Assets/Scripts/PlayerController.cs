@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody rigidBody;
+    private PlayerInput playerInputAction;
+
+    private void Awake()
     {
-        
+        playerInputAction = new PlayerInput();
+        playerInputAction.Enable();
+        rigidBody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Jump(InputAction.CallbackContext context)
     {
-        
+        Debug.Log("The jump button works!");
     }
 }
