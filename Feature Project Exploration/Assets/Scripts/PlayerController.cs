@@ -15,8 +15,12 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
     }
 
-    private void Jump(InputAction.CallbackContext context)
+    public void Jump(InputAction.CallbackContext context)
     {
-        Debug.Log("The jump button works!");
+        Debug.Log("The jump button is pressed!");
+        //if (context.performed)
+        //{
+            //Debug.Log("The jump button is pressed!");
+        //}
     }
 }
