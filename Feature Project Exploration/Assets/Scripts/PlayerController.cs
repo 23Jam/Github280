@@ -17,10 +17,11 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        Debug.Log("The jump button is pressed!");
-        //if (context.performed)
-        //{
-            //Debug.Log("The jump button is pressed!");
-        //}
+        Debug.Log(context);
+        if (context.performed)
+        {
+            rigidBody.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+            Debug.Log("The jump button is pressed!" + context.phase);
+        }
     }
 }
