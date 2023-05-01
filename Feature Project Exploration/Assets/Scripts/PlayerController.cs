@@ -15,6 +15,12 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
     }
 
+    private void FixedUpdate()
+    {
+        //Vector2 moveVec = playerInputAction.PlayerInput.Jump.ReadValue<Vector2>();
+        //rigidBody.AddForce(new Vector3(moveVec.x, 0, moveVec.y) * 5f, ForceMode.Force);
+    }
+
     public void Jump(InputAction.CallbackContext context)
     {
         Debug.Log(context);
